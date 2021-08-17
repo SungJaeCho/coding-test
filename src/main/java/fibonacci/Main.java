@@ -17,6 +17,7 @@ public class Main {
         System.out.println(fibonacci1(50));
 
         // 3.반복문
+        System.out.println(fibonacci2(50));
 
 
     }
@@ -37,6 +38,15 @@ public class Main {
             return fibo[n];
         }
         fibo[n] = fibonacci1(n-1) + fibonacci1(n-2);
+        return fibo[n];
+    }
+
+    public static long fibonacci2(int n) {
+        fibo[0] = 1;
+        fibo[1] = 1;
+        for(int i=2; i<=n; i++) {
+            fibo[i] = fibo[i-1] + fibo[i-2];
+        }
         return fibo[n];
     }
 
