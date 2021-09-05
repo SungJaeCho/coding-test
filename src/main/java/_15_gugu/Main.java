@@ -4,7 +4,7 @@ package _15_gugu;
 public class Main {
     public static void main(String[] args) {
         int s = 2;
-        int f = 5;
+        int f = 9;
         // 2~5단까지
         for(int i=1; i<=9; i++) {
             for(int dan = s ; dan<=f; dan++) {
