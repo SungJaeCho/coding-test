@@ -4,7 +4,8 @@
 /bin/
 !gradle/wrapper/gradle-wrapper.jar
 /resources/
-root-context.xml
+*.lock
+*.bin
 /WebContent/inicis/
 
 ### STS ###
