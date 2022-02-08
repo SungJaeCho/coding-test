@@ -18,6 +18,7 @@ public class LinkedList {
             return String.valueOf(this.data);
         }
     }
+    //처음에 추가
     public void addFirst(Object input) {
         Node newNode = new Node(input);
         newNode.next = head;
@@ -26,6 +27,39 @@ public class LinkedList {
         if(head.next == null) {
             tail = head;
         }
-
+    }
+    //끝에 추가
+    public void addLast(Object input) {
+        Node newNode = new Node(input);
+        if(size == 0) {
+            addFirst(input);
+        } else {
+            tail.next = newNode;
+            tail = newNode;
+            size++;
+        }
+    }
+    //특정위치 찾기
+    Node node(int index) {
+        Node x = head;
+        for(int i=0; i<index; i++)
+            x = x.next;
+        return x;
+    }
+    //노드추가
+    public void add(int k, Object input) {
+        if(k == 0) {
+            addFirst(input);
+        } else {
+            Node temp1 = node(k-1); //추가하려는 노드의 앞노드
+            Node temp2 = temp1.next; //추가하려는 노드의 뒷노드
+            Node newNode = new Node(input);
+            temp1.next = newNode;
+            newNode.next = temp2;
+            size++;
+            if(newNode.next == null) {
+                tail = newNode;
+            }
+        }
     }
 }
