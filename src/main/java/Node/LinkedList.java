@@ -5,6 +5,8 @@ public class LinkedList {
     private Node head;
     private Node tail;
     private int size = 0;
+
+
     private class Node {
         //데이터가 저장될 필드
         private Object data;
@@ -61,5 +63,50 @@ public class LinkedList {
                 tail = newNode;
             }
         }
+    }
+    //출력
+    public String toString() {
+        if(head == null) {
+            return "[]";
+        }
+        Node temp = head;
+        String str = "[";
+        while(temp.next != null) {
+            str += temp.data + ",";
+            temp = temp.next;
+        }
+        str += temp.data;
+        return str + "]";
+    }
+    //처음노드 삭제
+    public Object removeFirst() {
+        Node temp = head;
+        head = head.next;
+        Object returnData = temp.data;
+        temp = null;
+        size--;
+        return returnData;
+    }
+    //중간노드 삭제
+    public Object remove(int k) {
+        if(k == 0) {
+            return removeFirst();
+        }
+        Node temp = node(k-1);    //삭제대상 앞 노드
+        Node todoDeleted = temp.next;   //삭제대상 노드
+        temp.next = temp.next.next;     //삭제대상 앞노드의 연결을 삭제대상 다음것으로 지정
+        Object returnData = todoDeleted.data;
+        if(todoDeleted == tail) { //삭제대상 노드가 tail이면
+            tail = temp;
+        }
+        todoDeleted = null;
+        size--;
+        return returnData;
+    }
+    //마지막노드 삭제
+    public Object removeLast() {
+        //링크드리스트의 최대 단점 항상 연결을 해야하기때문에
+        //가장 마지막거 지울때 시간을 가장 많이 잡아먹음
+        return remove(size-1);
     }
 }
