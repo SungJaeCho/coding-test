@@ -109,4 +109,26 @@ public class LinkedList {
         //가장 마지막거 지울때 시간을 가장 많이 잡아먹음
         return remove(size-1);
     }
+    //리스트 사이즈
+    public int size() {
+        return size;
+    }
+    //값 가져오기
+    public Object get(int k) {
+        Node temp = node(k);
+        return temp.data;
+    }
+    //탐색
+    public Object indexOf(Object data) {
+        Node temp = head;
+        int index = 0;
+        while(temp.data != data) {
+            temp = temp.next;
+            index++;
+            if(temp == null) {
+                return -1;
+            }
+        }
+        return index;
+    }
 }
