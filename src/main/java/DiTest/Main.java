@@ -46,8 +46,8 @@ public class Main {
     }
 
     public static void main(String[] args) throws IOException {
-        Main spring = new Main();
-        int point = spring.getPoint("sungjaecho/react-springboot-test");
-        System.out.println(point);
+//        Main spring = new Main();
+//        int point = spring.getPoint("sungjaecho/react-springboot-test");
+//        System.out.println(point);
     }
 }
