@@ -9,9 +9,13 @@ public class Main {
         numbers.add(2, 25);
 
         LinkedList.ListIterator i = numbers.listIterator();
-        System.out.println(i.next());
-        System.out.println(i.next());
-        System.out.println(i.next());
-        System.out.println(i.next());
+        i.add(5);
+        i.next();
+        i.add(15);
+        System.out.println(numbers);
+//        while (i.hasNext()) {
+//            System.out.println(i.next());
+//        }
+
     }
 }
