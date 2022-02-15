@@ -167,5 +167,13 @@ public class LinkedList {
             nextIndex++;
             size++;
         }
+        public void remove() {
+            // 선택된 엘레먼트가 없을때
+            if(nextIndex == 0) {
+                throw new IllegalStateException();
+            }
+            LinkedList.this.remove(nextIndex-1);
+            nextIndex--;
+        }
     }
 }

@@ -1,5 +1,7 @@
 package Node;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         LinkedList numbers = new LinkedList();
@@ -9,13 +11,7 @@ public class Main {
         numbers.add(2, 25);
 
         LinkedList.ListIterator i = numbers.listIterator();
-        i.add(5);
         i.next();
-        i.add(15);
-        System.out.println(numbers);
-//        while (i.hasNext()) {
-//            System.out.println(i.next());
-//        }
-
+        i.remove();
     }
 }
