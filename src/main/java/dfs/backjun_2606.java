@@ -30,12 +30,12 @@ public class backjun_2606 {
             conn[second][first] = true;
         }
         dfs(1);
-        System.out.println(Arrays.toString(conn));
+        System.out.println(result);
     }
 
     static void dfs(int start) {
         visited[start] = true; //방문 처리
-        for(int i = 1; N >= i; ++i) { //모든 컴퓨터를 돌면서
+        for(int i = 1; i <= N; ++i) { //모든 컴퓨터를 돌면서
             //연결된 컴퓨터이면서 방문하지 않은 컴퓨터를 확인
             if(conn[start][i] == true && visited[i] == false) {
                 result++;
