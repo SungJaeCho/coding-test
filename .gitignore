@@ -6,6 +6,7 @@
 /resources/
 *.lock
 *.bin
+*.class
 /WebContent/inicis/
 
 ### STS ###
