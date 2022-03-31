@@ -18,7 +18,8 @@ public class IntersectionOfTwoArrays2 {
         List<Integer> list = new ArrayList<>();
 
         for (int num : nums1) {
-            map.merge(num, 2, Integer::sum);
+//            map.merge(num, 2, Integer::sum);
+            map.merge(num, 1, (v1,v2) -> v1 + v2);
         }
 
         for (int num : nums2) {
