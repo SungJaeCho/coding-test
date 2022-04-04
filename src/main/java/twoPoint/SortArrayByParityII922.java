@@ -7,7 +7,7 @@ public class SortArrayByParityII922 {
     public static void main(String[] args) {
         int[] nums = {4,2,5,7};
         System.out.println(Arrays.toString(sortArrayByParityBest(nums)));
-        System.out.println(Arrays.toString(sortArrayByParity2(nums))); //성능은 이게더 좋음.
+        System.out.println(Arrays.toString(sortArrayByParity2(nums)));
     }
     public static int[] sortArrayByParityBest(int[] nums) {
         int length = nums.length;
